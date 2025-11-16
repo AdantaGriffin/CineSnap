@@ -18,10 +18,12 @@
             </header>
 
             <form>
+                <!--
                 <select >
                     <option value="">Select A Genre</option>
                 </select>
-                <button>Find Movie</button>
+                -->
+                <input type="button" id="button" value="Find Movie"/>
             </form>
         </section>
         <section class="bottom">
@@ -35,12 +37,14 @@
                 <div class="movie-card">
 
                     <div class="movie-poster">
-                        poster
+                        <img  id="poster"/><p id="default-text" class="default-text">Ready for something great? Tap above and discover your next must watch movie!</p>
                     </div>
 
                     <div class="movie-text">
-                        <p>Start searching for a movie</p>
-                        <p>Try searching "Top Shottas" or "City of God"</p>
+                        <h3 id="title"></h3>
+                        <p id="vote"></p>
+                        <p id="overview"></p>
+                        <a id="preview" target="_blank"><p>watch trailer</p></a>
                     </div>
 
                 </div>
@@ -48,5 +52,6 @@
 
         </section>
     </main>
+    <script src="./index.js"></script>
 </body>
 </html>

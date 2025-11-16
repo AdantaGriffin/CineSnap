@@ -25,7 +25,7 @@ body {
   color: rgb(227, 78, 62);
   position: relative;
   bottom: 20px;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.3em;
   text-shadow: 1px 1px 10px black;
 }
 .top form {
@@ -50,7 +50,7 @@ body {
 .top form select:hover {
   cursor: grab;
 }
-.top form button {
+.top form input {
   background: radial-gradient(rgb(227, 78, 62), rgb(23, 14, 0));
   color: rgba(201, 133, 5, 0.774);
   border-radius: 20px;
@@ -58,14 +58,15 @@ body {
   padding: 5px 20px;
   margin: 10px auto 20px auto;
   font-family: "Hanalei Fill", system-ui;
+  text-align: center;
 }
-.top form button:hover {
+.top form input:hover {
   cursor: pointer;
   opacity: 0.7;
 }
 
 .bottom {
-  height: 120vh;
+  min-height: 150vh;
   background-color: black;
   color: whitesmoke;
   display: grid;
@@ -86,6 +87,7 @@ body {
 .bottom .result-saved #sav {
   border-radius: 0 20px 20px 0;
   color: grey;
+  text-decoration: line-through;
 }
 .bottom .result-saved #res, .bottom .result-saved #sav {
   border: 4px solid rgb(84, 55, 2);
@@ -100,15 +102,47 @@ body {
 }
 .bottom .results .movie-card {
   box-shadow: 1px 1px 10px rgb(84, 55, 2);
-  height: 90%;
+  height: 100%;
   width: 90%;
   margin: auto;
   display: grid;
-  grid-template-rows: 70% 30%;
+  grid-template-rows: 60% 40%;
   text-align: center;
   align-items: center;
 }
+.bottom .results .movie-card .default-text {
+  font-size: 1.75em;
+  position: relative;
+  bottom: 300px;
+}
 .bottom .results .movie-card .movie-poster {
   height: 100%;
-  background-color: rgba(59, 58, 57, 0.774);
+}
+.bottom .results .movie-card .movie-poster #poster {
+  width: 80%;
+  height: 100%;
+}
+.bottom .results .movie-card .movie-text {
+  display: grid;
+  grid-template-rows: 20% 20% 60%;
+}
+.bottom .results .movie-card .movie-text #overview {
+  width: 75%;
+  margin: auto;
+  font-size: 1.75em;
+}
+.bottom .results .movie-card .movie-text h3 {
+  font-size: 3em;
+}
+.bottom .results .movie-card .movie-text #vote {
+  font-size: 2em;
+}
+.bottom .results .movie-card .movie-text #preview {
+  font-size: 2em;
+  color: whitesmoke;
+  text-decoration: none;
+}
+.bottom .results .movie-card .movie-text #preview:hover {
+  transform: scale(1.2);
+  transition-duration: 1400ms;
 }
